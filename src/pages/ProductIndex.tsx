@@ -12,42 +12,61 @@ const ProductIndex = () => {
       description: "Professional apparel including t-shirts, trousers, blazers and jackets for your business team",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
       link: "/categories/corporate-workwear",
-      subcategories: ["T-Shirts", "Trousers & Pants", "Blazers & Jackets"]
+      subcategories: [
+        { name: "T-Shirts", link: "/subcategories/t-shirts" },
+        { name: "Trousers & Pants", link: "/subcategories/trousers" },
+        { name: "Blazers & Jackets", link: "/subcategories/blazers" }
+      ]
     },
     {
       title: "Business Accessories",
       description: "Essential business accessories including bags, backpacks, and professional headwear",
       image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop",
       link: "/categories/business-accessories",
-      subcategories: ["Bags & Backpacks", "Headwear"]
+      subcategories: [
+        { name: "Bags & Backpacks", link: "/subcategories/bags" },
+        { name: "Headwear", link: "/subcategories/headwear" }
+      ]
     },
     {
       title: "Commercial Lighting",
       description: "Premium lighting solutions for both indoor and outdoor commercial applications",
       image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=400&h=300&fit=crop",
       link: "/categories/commercial-lighting",
-      subcategories: ["Indoor Lighting", "Outdoor Lighting"]
+      subcategories: [
+        { name: "Indoor Lighting", link: "/subcategories/indoor-lighting" },
+        { name: "Outdoor Lighting", link: "/subcategories/outdoor-lighting" }
+      ]
     },
     {
       title: "Business Signage",
       description: "Professional signage solutions for interior and exterior business applications",
       image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=300&fit=crop",
       link: "/categories/business-signage",
-      subcategories: ["Interior Signs", "Exterior Signs"]
+      subcategories: [
+        { name: "Interior Signs", link: "/subcategories/interior-signs" },
+        { name: "Exterior Signs", link: "/subcategories/exterior-signs" }
+      ]
     },
     {
       title: "Beauty & Salon Supplies",
       description: "Professional-grade supplies and apparel for beauty and salon businesses",
       image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
       link: "/categories/beauty-salon",
-      subcategories: ["Professional Apparel", "Salon Essentials"]
+      subcategories: [
+        { name: "Professional Apparel", link: "/subcategories/salon-apparel" },
+        { name: "Salon Essentials", link: "/subcategories/salon-essentials" }
+      ]
     },
     {
       title: "Office & Facility Supplies",
       description: "Complete office furniture and facility supplies for modern workspaces",
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
       link: "/categories/office-supplies",
-      subcategories: ["Desk & Office Furniture", "Breakroom & Janitorial"]
+      subcategories: [
+        { name: "Desk & Office Furniture", link: "/subcategories/office-furniture" },
+        { name: "Breakroom & Janitorial", link: "/subcategories/breakroom" }
+      ]
     }
   ];
 
@@ -91,12 +110,13 @@ const ProductIndex = () => {
                     <h4 className="text-sm font-medium text-gray-700 mb-2">Subcategories:</h4>
                     <div className="flex flex-wrap gap-2">
                       {category.subcategories.map((sub) => (
-                        <span 
-                          key={sub}
-                          className="text-xs bg-orange-100 text-brand-orange px-2 py-1 rounded-full"
+                        <Link
+                          key={sub.name}
+                          to={sub.link}
+                          className="text-xs bg-orange-100 text-brand-orange px-2 py-1 rounded-full hover:bg-brand-orange hover:text-white transition-colors duration-200"
                         >
-                          {sub}
-                        </span>
+                          {sub.name}
+                        </Link>
                       ))}
                     </div>
                   </div>
