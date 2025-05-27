@@ -100,24 +100,24 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative bg-gradient-to-br from-blue-900 via-blue-700 to-blue-600 text-white min-h-screen flex items-center"
+        className="relative bg-gradient-to-br from-brand-orange via-brand-teal to-brand-red text-white min-h-screen flex items-center"
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
             <span className="block">Supplyy Genniie</span>
-            <span className="block text-blue-200 text-xl md:text-3xl mt-2">
+            <span className="block text-orange-200 text-xl md:text-3xl mt-2">
               Your Strategic Partner for Business Essentials
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100 animate-fade-in">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-orange-100 animate-fade-in">
             Premium quality products, reliable supply chain, and competitive B2B pricing 
             for businesses that demand excellence.
           </p>
           <Button 
             asChild 
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 animate-fade-in hover:scale-105 transition-all duration-300"
+            className="bg-white text-brand-orange hover:bg-orange-50 text-lg px-8 py-4 animate-fade-in hover:scale-105 transition-all duration-300"
           >
             <Link to="/products">Browse Products</Link>
           </Button>
@@ -147,12 +147,12 @@ const Index = () => {
                     alt={category.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{category.title}</h3>
                   <p className="text-gray-600 mb-4">{category.description}</p>
-                  <Button asChild variant="outline" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <Button asChild variant="outline" className="w-full group-hover:bg-brand-orange group-hover:text-white transition-colors">
                     <Link to={category.link}>Explore Category</Link>
                   </Button>
                 </CardContent>
@@ -181,8 +181,8 @@ const Index = () => {
                   className="text-center animate-on-scroll hover:scale-105 transition-transform duration-300"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="h-8 w-8 text-blue-600" />
+                  <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="h-8 w-8 text-brand-orange" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -194,7 +194,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
@@ -227,7 +227,7 @@ const Index = () => {
                   <p className="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
                   <div className="border-t pt-4">
                     <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-blue-600">{testimonial.company}</p>
+                    <p className="text-brand-teal">{testimonial.company}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -237,16 +237,16 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-brand-orange to-brand-teal text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-on-scroll">
           <h2 className="text-4xl font-bold mb-4">Ready to Partner with Us?</h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-orange-100">
             Get in touch today and discover how Supplyy Genniie can help your business thrive
           </p>
           <Button 
             asChild 
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
+            className="bg-white text-brand-orange hover:bg-orange-50 text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
           >
             <Link to="/contact">Contact Us Today</Link>
           </Button>

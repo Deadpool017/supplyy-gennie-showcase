@@ -9,18 +9,24 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">Supplyy Genniie</h3>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/lovable-uploads/5037847e-8110-4042-8ea6-f691e41bb4fd.png" 
+                alt="Supplyy Genniie Logo" 
+                className="h-8 w-auto mr-3 bg-white p-1 rounded"
+              />
+            </div>
             <p className="text-gray-300 mb-4">
               Your strategic partner for premium business essentials. We provide high-quality products 
               that help businesses succeed and grow.
             </p>
             <div className="flex flex-col space-y-2">
               <div className="flex items-center">
-                <Phone className="h-5 w-5 mr-3 text-blue-400" />
+                <Phone className="h-5 w-5 mr-3 text-brand-teal" />
                 <span>9330353083</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-5 w-5 mr-3 text-blue-400" />
+                <Mail className="h-5 w-5 mr-3 text-brand-teal" />
                 <span>supplyygenniie@gmail.com</span>
               </div>
             </div>
@@ -30,10 +36,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-blue-400 transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="text-gray-300 hover:text-blue-400 transition-colors">Products</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-brand-teal transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-brand-teal transition-colors">About Us</Link></li>
+              <li><Link to="/products" className="text-gray-300 hover:text-brand-teal transition-colors">Products</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-brand-teal transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -41,10 +47,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Categories</h4>
             <ul className="space-y-2">
-              <li><Link to="/categories/corporate-workwear" className="text-gray-300 hover:text-blue-400 transition-colors">Corporate Workwear</Link></li>
-              <li><Link to="/categories/commercial-lighting" className="text-gray-300 hover:text-blue-400 transition-colors">Commercial Lighting</Link></li>
-              <li><Link to="/categories/business-signage" className="text-gray-300 hover:text-blue-400 transition-colors">Business Signage</Link></li>
-              <li><Link to="/categories/office-supplies" className="text-gray-300 hover:text-blue-400 transition-colors">Office Supplies</Link></li>
+              <li><Link to="/categories/corporate-workwear" className="text-gray-300 hover:text-brand-teal transition-colors">Corporate Workwear</Link></li>
+              <li><Link to="/categories/commercial-lighting" className="text-gray-300 hover:text-brand-teal transition-colors">Commercial Lighting</Link></li>
+              <li><Link to="/categories/business-signage" className="text-gray-300 hover:text-brand-teal transition-colors">Business Signage</Link></li>
+              <li><Link to="/categories/office-supplies" className="text-gray-300 hover:text-brand-teal transition-colors">Office Supplies</Link></li>
             </ul>
           </div>
         </div>

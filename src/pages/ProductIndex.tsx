@@ -56,10 +56,10 @@ const ProductIndex = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <section className="bg-gradient-to-br from-brand-orange to-brand-teal text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">All Product Categories</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-orange-100 max-w-3xl mx-auto">
             Explore our comprehensive range of business essentials organized by category. 
             Find exactly what your business needs to succeed and grow.
           </p>
@@ -81,7 +81,7 @@ const ProductIndex = () => {
                     alt={category.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <CardContent className="p-6 flex flex-col h-full">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">{category.title}</h3>
@@ -93,7 +93,7 @@ const ProductIndex = () => {
                       {category.subcategories.map((sub) => (
                         <span 
                           key={sub}
-                          className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
+                          className="text-xs bg-orange-100 text-brand-orange px-2 py-1 rounded-full"
                         >
                           {sub}
                         </span>
@@ -103,7 +103,7 @@ const ProductIndex = () => {
                   
                   <Button 
                     asChild 
-                    className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors mt-auto"
+                    className="w-full group-hover:bg-brand-orange group-hover:text-white transition-colors mt-auto"
                     variant="outline"
                   >
                     <Link to={category.link}>Explore Category</Link>
@@ -116,16 +116,16 @@ const ProductIndex = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-brand-orange text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-4">Need Help Finding the Right Products?</h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-orange-100">
             Our team is here to help you find the perfect solutions for your business needs
           </p>
           <Button 
             asChild 
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
+            className="bg-white text-brand-orange hover:bg-orange-50 text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
           >
             <Link to="/contact">Contact Our Experts</Link>
           </Button>
