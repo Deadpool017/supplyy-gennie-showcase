@@ -1,15 +1,18 @@
-
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Badge, Star, Shield, Users } from "lucide-react";
+import { Badge, Star, Shield, Users, ArrowRight, CheckCircle } from "lucide-react";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const observerOptions = {
@@ -93,34 +96,110 @@ const Index = () => {
     }
   ];
 
+  const highlights = [
+    "Premium Quality Products",
+    "B2B Pricing & Terms",
+    "Reliable Supply Chain",
+    "Custom Branding Available"
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Enhanced Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative bg-gradient-to-br from-brand-orange via-brand-teal to-brand-red text-white min-h-screen flex items-center"
+        className="relative bg-gradient-to-br from-brand-orange via-brand-teal to-brand-red text-white min-h-screen flex items-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            <span className="block">Supplyy Genniie</span>
-            <span className="block text-orange-200 text-xl md:text-3xl mt-2">
-              Your Strategic Partner for Business Essentials
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-orange-100 animate-fade-in">
-            Premium quality products, reliable supply chain, and competitive B2B pricing 
-            for businesses that demand excellence.
-          </p>
-          <Button 
-            asChild 
-            size="lg" 
-            className="bg-white text-brand-orange hover:bg-orange-50 text-lg px-8 py-4 animate-fade-in hover:scale-105 transition-all duration-300"
-          >
-            <Link to="/products">Browse Products</Link>
-          </Button>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        </div>
+        
+        <div className="absolute inset-0 bg-black/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-left">
+            <div className="mb-6">
+              <span className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Your Strategic Business Partner
+              </span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="block text-white">Supplyy Genniie</span>
+              <span className="block text-orange-200 text-2xl md:text-3xl mt-2 font-medium">
+                Premium Business Essentials
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl mb-8 text-orange-100 leading-relaxed">
+              Transform your business with premium quality products, reliable supply chains, 
+              and competitive B2B pricing designed for excellence.
+            </p>
+
+            {/* Highlights */}
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              {highlights.map((highlight, index) => (
+                <div key={index} className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 mr-2 text-orange-200" />
+                  <span className="text-sm font-medium">{highlight}</span>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-white text-brand-orange hover:bg-orange-50 text-lg px-8 py-4 hover:scale-105 transition-all duration-300 group"
+              >
+                <Link to="/products">
+                  Browse Products
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-brand-orange text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/contact">Get Quote</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Content - Stats/Visual */}
+          <div className="lg:text-center">
+            <div className="relative">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">1000+</div>
+                    <div className="text-orange-200 text-sm">Happy Clients</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">50K+</div>
+                    <div className="text-orange-200 text-sm">Products Delivered</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">99.8%</div>
+                    <div className="text-orange-200 text-sm">On-Time Delivery</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                    <div className="text-orange-200 text-sm">Customer Support</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -94,14 +94,16 @@ const ProductIndex = () => {
                 key={category.title} 
                 className="hover:shadow-xl transition-all duration-300 hover:scale-105 group overflow-hidden h-full"
               >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={category.image} 
-                    alt={category.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                <Link to={category.link} className="block">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </Link>
                 <CardContent className="p-6 flex flex-col h-full">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">{category.title}</h3>
                   <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
