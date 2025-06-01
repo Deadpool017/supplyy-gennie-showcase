@@ -168,7 +168,7 @@ const Index = () => {
                 asChild 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-brand-orange text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-brand-orange text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
               >
                 <Link to="/contact">Get Quote</Link>
               </Button>
