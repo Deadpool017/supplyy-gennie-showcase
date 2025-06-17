@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -81,7 +80,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">Phone</h3>
-                        <p className="text-gray-600">+91 9830708205</p>
+                        <p className="text-gray-600">9830708205</p>
                       </div>
                     </div>
                   </CardContent>
